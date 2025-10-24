@@ -1,6 +1,9 @@
 ﻿// Application Programming .NET Programming with C# by Abdullahi Tijjani
 // Example file for parsing dates from strings
-
+string[] NumStrs = {" 1 ", " 1.45 ", "-100", "5e+04 "};
+int testint;
+float testfloat;
+bool result;
 // Collection of various date string formats to attempt parsing
 string[] sampleDateTimes = {
     "January 1, 2025 9:30 AM",
@@ -15,4 +18,8 @@ string[] sampleDateTimes = {
 foreach (string datestr in sampleDateTimes) {
     DateTime result;
     // TODO: Use the static class function TryParse to try parsing the dates
+}if (DateTime.TryParse(datestr, out result)) {
+Console.WriteLine($"{datestr, -25} get parse as: {result}"); }
+else {
+Console.WriteLine($"Could not parse '{datestr}'");
 }
